@@ -1,0 +1,129 @@
+@import "./variables.scss";
+@import "./breakpoints.scss";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e0e0e0;
+    position: relative;
+    padding: 10px 20px;
+
+    &_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 10px 20px;
+
+        @include lg {
+            padding: 10px 10px;
+        }
+    }
+
+    &_left {
+        max-width: 200px;
+
+        img {
+            max-width: 140px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &_center {
+        ul {
+            list-style: none;
+            margin-top: 10px;
+            padding: 0;
+
+            li {
+                margin-bottom: 5px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        color: $pinkred;
+                    }
+                }
+            }
+        }
+    }
+
+    &_right {
+        max-width: 200px;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        &_info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            p {
+                margin-left: 5px;
+            }
+        }
+
+        &_socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+
+            &_icon {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: $pinkred;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.5s ease-in-out;
+                color: white;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    &_help_button {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: #555f69;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+    }
+
+    &_help_button:hover {
+        background-color: #0056b3;
+    }
+
+    &_bottom {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 12px;
+        color: #555;
+        width: 100%;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+        background-color: #f1f1f1;
+    }
+}

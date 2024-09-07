@@ -1,0 +1,39 @@
+.cancel-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8d7da;
+
+    .cancel-container {
+        text-align: center;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+
+        h1 {
+            color: #721c24;
+            font-size: 2rem;
+        }
+
+        p {
+            margin: 20px 0;
+            color: #6c757d;
+            font-size: 1.25rem;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #721c24;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #a94442;
+            }
+        }
+    }
+}

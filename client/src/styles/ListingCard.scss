@@ -1,0 +1,147 @@
+@import "./variables.scss";
+
+.listing-card {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    &:hover {
+        @include shadow;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:first-child {
+                background-color: #28459c;
+                color: white;
+            }
+
+            &:last-child {
+                background-color: #f44336;
+                color: white;
+            }
+        }
+    }
+
+    .slider-container {
+        width: 310px;
+        overflow: hidden;
+        margin-bottom: 5px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+
+            .slide {
+                position: relative;
+                flex: 0 0 100%;
+                width: 100%;
+                height: 270px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    filter: brightness(85%);
+                }
+
+                .prev-button,
+                .next-button {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding: 6px;
+                    border-radius: 50%;
+                    border: none;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    z-index: 9999;
+
+                    &:hover {
+                        background-color: gray;
+                    }
+                }
+
+                .prev-button {
+                    left: 10px;
+                }
+
+                .next-button {
+                    right: 10px;
+                }
+            }
+        }
+    }
+
+    h3 {
+        font-size: 15px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    p {
+        font-size: 16px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    span {
+        font-weight: 700;
+        font-size: 17px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .favorite {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        border: none;
+        font-size: 24px;
+        color: red;
+        cursor: pointer;
+        z-index: 999;
+        background: none;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .star-icon {
+            margin-left: 4px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.listing-card .content {
+    flex-grow: 1;
+}

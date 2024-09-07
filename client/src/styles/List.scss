@@ -1,0 +1,88 @@
+@import "./breakpoints.scss";
+@import "./variables.scss";
+
+
+.title-list {
+    margin: 40px 100px 40px 100px;
+    color: $blue;
+
+    @include sm {
+        margin: 40px 50px 40px 50px;
+    }
+}
+
+.list {
+    padding: 0 100px 120px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: flex-start;
+    margin-top: 40px;
+
+    @include xl {
+        padding: 0 20px 120px;
+        align-items: center;
+    }
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+    text-align: left;
+}
+
+.title-list {
+    margin-bottom: 10px;
+    color: $blue;
+    margin: 40px 100px 0 100px;
+
+    @include sm {
+        margin: 40px 40px 0 40px;
+    }
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 100px;
+
+    @include sm {
+        margin-left: 50px;
+    }
+}
+
+.stats-button,
+.pdf-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 150px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.pdf-button {
+    background-color: #f44336;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.chart {
+    flex-grow: 1;
+}

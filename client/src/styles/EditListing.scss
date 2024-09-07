@@ -1,0 +1,199 @@
+@import "../styles/variables.scss";
+@import "../styles/breakpoints.scss";
+
+.edit-listing {
+    background-color: $lightgrey;
+    padding: 40px 60px 120px;
+
+    @include mm {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        color: $blue;
+        margin-bottom: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+
+        h3 {
+            color: $blue;
+            margin-bottom: 10px;
+        }
+
+        .styled-select,
+        .styled-input {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 1px solid darken($lightgrey, 10%);
+            font-size: 18px;
+            margin-bottom: 10px;
+
+            &:focus {
+                border-color: $pinkred;
+                outline: none;
+            }
+        }
+
+        .styled-select {
+            appearance: none;
+            background-color: white;
+            background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5H5z%22%20fill%3D%22%23ccc%22%2F%3E%3C%2Fsvg%3E);
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            cursor: pointer;
+        }
+
+        .styled-input {
+            background-color: white;
+            color: black;
+        }
+    }
+
+    .step {
+        background-color: white;
+        padding: 30px 40px;
+        border-radius: 20px;
+        margin-top: 40px;
+
+        @include sm {
+            padding: 30px 20px;
+        }
+
+        hr {
+            margin: 15px 0 25px;
+        }
+
+        .count-control {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            svg {
+                cursor: pointer;
+
+                &:hover {
+                    color: $pinkred;
+                }
+            }
+
+            input[type="number"] {
+                width: 80px;
+                text-align: center;
+                border: 1px solid $grey;
+                border-radius: 5px;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+
+        .facilities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: flex-start;
+
+            .facility {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: 0.2s ease;
+                border: 1px solid $grey;
+                border-radius: 10px;
+                padding: 10px;
+
+                &:hover {
+                    border-color: $pinkred;
+                    background-color: $lightgrey;
+                }
+
+                &.selected {
+                    background-color: $lightgrey;
+                    border-color: $pinkred;
+                }
+
+                p {
+                    font-size: 14px;
+                    text-align: center;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .photos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+
+        .photo,
+        .upload-photo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border: 1px dashed $grey;
+            border-radius: 10px;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            button {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                background-color: $lightgrey;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+
+                svg {
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    background-color: $pinkred;
+                }
+            }
+        }
+
+        .upload-photo-container {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                font-size: 24px;
+            }
+        }
+    }
+
+
+    .submit {
+        margin-top: 40px;
+
+        @include buttonStyle;
+
+        &:hover {
+            box-shadow: 0 0 10px 3px rgb(117, 117, 117);
+        }
+    }
+}

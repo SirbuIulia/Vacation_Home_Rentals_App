@@ -1,0 +1,42 @@
+.success-page {
+    background-color: #bbf7d0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    h1 {
+        font-size: 2rem;
+        color: #22543d;
+        font-weight: bold;
+
+        @media (min-width: 768px) {
+            font-size: 3rem;
+        }
+    }
+
+    p {
+        font-size: 1.25rem;
+        color: #2f855a;
+
+        @media (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    button {
+        padding: 0.75rem 1.5rem;
+        background-color: #38a169;
+        color: white;
+        font-weight: bold;
+        border-radius: 9999px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #2f855a;
+        }
+    }
+}
