@@ -6,7 +6,7 @@ This project was developed for my bachelor's thesis. It is designed for booking 
 
 🛠️ Technologies Used
 
-Backend:**Node.js**
+Backend: **Node.js**
 
 Frontend: **React.js**
 
